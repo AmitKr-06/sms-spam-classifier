@@ -74,3 +74,6 @@ instance/
 # ==========================
 .DS_Store
 Thumbs.db
+
+# AWS Deployment
+gunicorn 

@@ -1,0 +1,19 @@
+# Describes what a valid train/test CSV must look like.
+# data_validation.py reads this instead of hardcoding column names/types.
+
+columns:
+  sms:
+    dtype: object      # text column
+    required: true
+  label:
+    dtype: int64
+    required: true
+
+target_column: label
+
+# Allowed values for the target column (0 = ham, 1 = spam)
+domain:
+  label: [0, 1]
+
+allow_null: false
+allow_duplicate_rows: false

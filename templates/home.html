@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS Spam Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>SMS Spam Classifier</h1>
+        <p>A machine learning model that detects whether an SMS message is spam or a genuine message (ham).</p>
+        <a class="btn" href="{{ url_for('classify') }}">Try it now</a>
+    </div>
+</body>
+</html>

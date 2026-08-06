@@ -1,0 +1,20 @@
+paths:
+  raw_data: data/raw/sms.csv
+  train_data: data/processed/train.csv
+  test_data: data/processed/test.csv
+  preprocessor: artifacts/preprocessor.pkl
+  model: artifacts/model.pkl
+  metrics: artifacts/metrics.json
+
+train:
+  test_size: 0.2
+  random_state: 42
+
+tfidf:
+  max_features: 3000
+
+model:
+  logistic:
+    max_iter: 1000
+  svm:
+    probability: true

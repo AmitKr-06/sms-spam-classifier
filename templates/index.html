@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classify a Message</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Check a Message</h1>
+
+        <form method="POST" action="{{ url_for('classify') }}">
+            <textarea name="message" rows="5" placeholder="Paste an SMS message here...">{{ message }}</textarea>
+            <button type="submit">Classify</button>
+        </form>
+
+        {% if result %}
+        <div class="result {{ 'spam' if result == 'SPAM' else 'ham' }}">
+            <h2>{{ result }}</h2>
+            <p>Confidence: {{ confidence }}%</p>
+        </div>
+        {% endif %}
+
+        <a class="btn-back" href="{{ url_for('home') }}">Back to home</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
